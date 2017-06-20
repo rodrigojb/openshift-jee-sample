@@ -17,7 +17,7 @@
     <header ng-show="usuarioLogueado" ng-include="'views/header.html'">
     </header>
 
-    <div ui-view="container"></div>
+    <ui-view></ui-view>
 
     <footer ng-show="usuarioLogueado" ng-include="'views/footer.html'">
     </footer>
@@ -28,8 +28,8 @@
 <script src="public/js/router.js"></script>
 <script src="public/js/controllers/headerController.js"></script>
 <script src="public/js/controllers/homeController.js"></script>
-<script src="public/js/controllers/mainController.js"></script>
 <script src="public/js/controllers/loginController.js"></script>
+<script src="public/js/controllers/mainController.js"></script>
 
 <script src="public/js/services/adminService.js"></script>
 <script src="public/js/services/busquedasService.js"></script>
