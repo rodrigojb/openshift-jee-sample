@@ -1,4 +1,4 @@
-myApp.controller('headerController', function($rootScope,$scope,$state,Sesion) {
+myApp.controller('headerController', ['Sesion',function($rootScope,$scope,$state,Sesion) {
 
     $scope.logout = function () {
 
@@ -14,4 +14,4 @@ myApp.controller('headerController', function($rootScope,$scope,$state,Sesion) {
 
     };
 
-});
+}]);
