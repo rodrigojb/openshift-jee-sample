@@ -1,6 +1,6 @@
 'use strict';
 
-myApp.controller('MainController', function($rootScope,$scope,$state) {
+myApp.controller('MainController', ['$rootScope','$scope','$state', function($rootScope,$scope,$state) {
 
     $rootScope.usuarioLogueado = false;
     $rootScope.esAdmin = false;
@@ -11,4 +11,4 @@ myApp.controller('MainController', function($rootScope,$scope,$state) {
         $state.go('login');
     }
 
-});
+}]);

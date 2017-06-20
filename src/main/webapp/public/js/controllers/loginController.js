@@ -1,4 +1,4 @@
-myApp.controller('loginController', function ($rootScope, $scope, $state, Sesion) {
+myApp.controller('loginController', ['$rootScope','$scope','$state','Sesion' ,function ($rootScope, $scope, $state, Sesion) {
 
     $scope.userName = "";
     $scope.password = "";
@@ -19,4 +19,4 @@ myApp.controller('loginController', function ($rootScope, $scope, $state, Sesion
 
     };
 
-});
+}]);
