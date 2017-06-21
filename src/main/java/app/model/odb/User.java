@@ -3,21 +3,21 @@
  */
 package app.model.odb;
 
-//import com.querydsl.core.annotations.QueryEntity;
-//import org.mongodb.morphia.annotations.Id;
-//import org.springframework.data.annotation.PersistenceConstructor;
-//import org.springframework.data.mongodb.core.mapping.Document;
+import com.querydsl.core.annotations.QueryEntity;
+import org.mongodb.morphia.annotations.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 //import java.util.stream.Collectors;
 
-//@QueryEntity
-//@Document
+@QueryEntity
+@Document
 public class User {
 
-//	@Id
+	@Id
 	private String id;
 
 	private List<MovieList> lists;
@@ -44,7 +44,7 @@ public class User {
 		this.password = password;
 	}
 
-//	@PersistenceConstructor
+	@PersistenceConstructor
 	public User() {}
 
 
