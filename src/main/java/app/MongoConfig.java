@@ -24,7 +24,7 @@ public class MongoConfig extends AbstractMongoConfiguration {
 
     @Override
     public Mongo mongo() throws Exception {
-        return new MongoClient("172.31.55.133", 27017);
+        return new MongoClient("10.130.33.235", 27017);
     }
 
     @Override
