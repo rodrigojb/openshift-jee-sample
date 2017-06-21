@@ -1,21 +1,21 @@
 'use strict';
 
-myApp.service('Usuario', function ($http, $rootScope) {
+myApp.service('Usuario', ["$http", "$rootScope","BASE", function ($http, $rootScope, BASE) {
 
     var self = this;
 
     self.register = function (credentials) {
-        return $http.post(settings.apiUrl+'user/', credentials);
+        return $http.post(BASE + 'user/', credentials);
     };
 
     self.getRecMovies = function (sesion,callback) {
-        return $http.get(settings.apiUrl+'user/favoriteactor/movies', {
+        return $http.get(BASE + 'user/favoriteactor/movies', {
             headers: {'token': sesion.idSesion}
         }).then(callback);
     }
 
     self.actoresFavoritos = function (credentials) {
-        return $http.get(settings.apiUrl+'user/favoriteactor/',
+        return $http.get(BASE + 'user/favoriteactor/',
             {
                 headers: {
                     'token': $rootScope.sesionActual.idSesion
@@ -25,7 +25,7 @@ myApp.service('Usuario', function ($http, $rootScope) {
     }
 
     self.marcarActorFavorito = function (actor) {
-        return $http.put(settings.apiUrl+'user/favoriteactor/', actor,
+        return $http.put(BASE + 'user/favoriteactor/', actor,
             {
                 headers: {
                     'token': $rootScope.sesionActual.idSesion
@@ -34,7 +34,7 @@ myApp.service('Usuario', function ($http, $rootScope) {
         );
     };
     self.desmarcarActorFavorito = function (actor_id) {
-        return $http.put(settings.apiUrl+'user/favoriteactor/' + actor_id,null,
+        return $http.put(BASE +'user/favoriteactor/' + actor_id,null,
             {
                 headers: {
                     'token': $rootScope.sesionActual.idSesion
@@ -44,7 +44,7 @@ myApp.service('Usuario', function ($http, $rootScope) {
     }
 
     self.getListas = function (credentials) {
-        return $http.get(settings.apiUrl+'user/movieLists', {
+        return $http.get(BASE + 'user/movieLists', {
                 headers: {
                     'token': $rootScope.sesionActual.idSesion
                 }
@@ -52,7 +52,7 @@ myApp.service('Usuario', function ($http, $rootScope) {
         );
     };
     self.getRankingActoresFavoritos = function () {
-        return $http.get(settings.apiUrl+'user/favoriteactor/ranking',
+        return $http.get(BASE +'user/favoriteactor/ranking',
             {
                 headers: {
                     'token': $rootScope.sesionActual.idSesion
@@ -63,5 +63,4 @@ myApp.service('Usuario', function ($http, $rootScope) {
 
 
 
-})
-;
+}]);
