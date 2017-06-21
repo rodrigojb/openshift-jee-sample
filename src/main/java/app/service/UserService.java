@@ -2,6 +2,7 @@ package app.service;
 
 import app.model.odb.Credencial;
 import app.model.odb.User;
+import app.repositories.RepositorioDeUsuarios;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,6 @@ import org.springframework.stereotype.Service;
 //import java.util.stream.Collectors;
 //import app.repositories.RepositorioDeActores;
 //import app.repositories.RepositorioDeListas;
-//import app.repositories.RepositorioDeUsuarios;
 
 @Service
 public class UserService {
@@ -17,9 +17,9 @@ public class UserService {
     @Autowired
     SesionesService sesionesService;
 
-//    @Autowired
-//    RepositorioDeUsuarios repositorioDeUsuarios;
-//
+    @Autowired
+    RepositorioDeUsuarios repositorioDeUsuarios;
+
 //    @Autowired
 //    RepositorioDeListas repositorioDeListas;
 //
@@ -30,7 +30,7 @@ public class UserService {
 
     public void crearNuevoUsuario(Credencial userAndPassword) throws ExceptionInInitializerError {
         User usuarioNuevo = User.create(userAndPassword, false);
-//        repositorioDeUsuarios.insert(usuarioNuevo);
+        repositorioDeUsuarios.insert(usuarioNuevo);
     }
 
 //    public List<User> obtenerUsuarios() {
