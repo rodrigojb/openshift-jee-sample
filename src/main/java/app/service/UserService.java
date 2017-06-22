@@ -26,8 +26,6 @@ public class UserService {
 //    @Autowired
 //    RepositorioDeActores repositorioDeActores;
 
-
-
     public void crearNuevoUsuario(Credencial userAndPassword) throws ExceptionInInitializerError {
         User usuarioNuevo = User.create(userAndPassword, false);
         repositorioDeUsuarios.insert(usuarioNuevo);
