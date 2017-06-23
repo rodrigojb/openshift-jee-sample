@@ -14,8 +14,8 @@ import org.springframework.stereotype.Service;
 @Service
 public class UserService {
 
-    @Autowired
-    SesionesService sesionesService;
+//    @Autowired
+//    SesionesService sesionesService;
 
     @Autowired
     RepositorioDeUsuarios repositorioDeUsuarios;

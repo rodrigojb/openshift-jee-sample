@@ -25,8 +25,8 @@ public class MongoConfig extends AbstractMongoConfiguration {
 
     @Override
     public Mongo mongo() throws Exception {
-//        return new MongoClient("127.0.0.1", 27017);
-        return new MongoClient(new MongoClientURI(System.getenv("OPENSHIFT_MONGODB_DB_URL")));
+        //return new MongoClient("127.0.0.1", 27017);
+        return new MongoClient(new MongoClientURI("mongodb://tacs:grupo1@mongodb/tmdb-g1"));
     }
 
     @Override
