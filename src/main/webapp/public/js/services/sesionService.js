@@ -1,3 +1,5 @@
+'use strict';
+
 myApp.service('Sesion', ["$http", "$rootScope","BASE", function ($http, $rootScope, BASE) {
 
     var self = this;
