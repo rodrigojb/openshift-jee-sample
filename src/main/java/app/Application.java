@@ -8,7 +8,11 @@ import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.support.SpringBootServletInitializer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.annotation.Bean;
 import org.springframework.data.mongodb.core.MongoOperations;
+import org.springframework.web.servlet.config.annotation.CorsRegistry;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 
 @SpringBootApplication
@@ -21,6 +25,16 @@ public class Application extends SpringBootServletInitializer {
 //        mostrarAsciiArtInicial();
         levantarMongo();
         LOG.info("Mongo levantado.");
+    }
+
+    @Bean
+    public WebMvcConfigurer corsConfigurer() {
+        return new WebMvcConfigurerAdapter() {
+            @Override
+            public void addCorsMappings(CorsRegistry registry) {
+                registry.addMapping("/**").allowedOrigins("http://tacs-tmdb-tmdb-grupo1.7e14.starter-us-west-2.openshiftapps.com");
+            }
+        };
     }
 
     @Override
@@ -52,3 +66,4 @@ public class Application extends SpringBootServletInitializer {
 //        return new File(".").getAbsoluteFile();
 //    }
 }
+
