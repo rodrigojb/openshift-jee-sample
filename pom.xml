@@ -110,10 +110,9 @@
             <version>4.3.7.RELEASE</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.tomcat</groupId>
-            <artifactId>tomcat-catalina</artifactId>
-            <version>7.0.42</version>
-            <scope>provided</scope>
+            <groupId>com.thetransactioncompany</groupId>
+            <artifactId>cors-filter</artifactId>
+            <version>2.4</version>
         </dependency>
     </dependencies>
 
