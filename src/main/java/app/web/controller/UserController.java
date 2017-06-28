@@ -9,7 +9,7 @@ import java.io.IOException;
 
 
 @RestController
-@CrossOrigin
+@CrossOrigin(origins = "*")
 @RequestMapping(value = "/api/user")
 public class UserController {
 
