@@ -110,11 +110,11 @@
             <artifactId>tomcat-catalina</artifactId>
             <version>8.0.5</version>
         </dependency>
-        <dependency>
-            <groupId>com.thetransactioncompany</groupId>
-            <artifactId>cors-filter</artifactId>
-            <version>1.8</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>com.thetransactioncompany</groupId>-->
+            <!--<artifactId>cors-filter</artifactId>-->
+            <!--<version>1.8</version>-->
+        <!--</dependency>-->
     </dependencies>
 
 <profiles>
@@ -136,10 +136,6 @@
                     <outputDirectory>target</outputDirectory>
               		  <warName>ROOT</warName>
                 </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
         </plugins>
       </build>
