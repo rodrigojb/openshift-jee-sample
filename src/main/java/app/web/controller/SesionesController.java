@@ -4,13 +4,12 @@ import app.model.odb.Credencial;
 import app.model.odb.Sesion;
 import app.service.SesionesService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 
 import java.io.IOException;
 
-@Controller
-@CrossOrigin(origins = "http://tacs-tmdb-tmdb-grupo1.7e14.starter-us-west-2.openshiftapps.com")
+@RestController
+@CrossOrigin(origins = "tacs-tmdb-tmdb-grupo1.7e14.starter-us-west-2.openshiftapps.com")
 @RequestMapping("/api/authentication")
 public class SesionesController {
 
