@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.io.IOException;
 
 @Controller
-@CrossOrigin
+@CrossOrigin(origins = "http://tacs-tmdb-tmdb-grupo1.7e14.starter-us-west-2.openshiftapps.com")
 @RequestMapping(value = "/api/user")
 public class UserController {
 
