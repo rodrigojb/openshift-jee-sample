@@ -6,6 +6,7 @@ package tacs.app.model.odb;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 //import org.mongodb.morphia.annotations.Id;
 //import org.springframework.data.annotation.PersistenceConstructor;
@@ -98,10 +99,10 @@ public class MovieList {
 		// TODO Auto-generated method stub
 	}
 
-//	public List<Movie> intersectionWith(MovieList movieList2) {
-//		List<Movie> intersection = this.getMovies().stream().filter(movie -> movieList2.getMovies().stream().anyMatch(m -> m.getId().equals(movie.getId()))).collect(Collectors.toList());
-//		return intersection;
-//	}
+	public List<Movie> intersectionWith(MovieList movieList2) {
+		List<Movie> intersection = this.getMovies().stream().filter(movie -> movieList2.getMovies().stream().anyMatch(m -> m.getId().equals(movie.getId()))).collect(Collectors.toList());
+		return intersection;
+	}
 
 	public int size() {
 		return this.getMovies().size();

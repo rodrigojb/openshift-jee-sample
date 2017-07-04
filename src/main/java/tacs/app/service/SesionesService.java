@@ -59,10 +59,7 @@ public class SesionesService {
         Sesion sesion = RepositorioDeSesiones.getInstance().searchById(token);
         validarSesionActiva(sesion);
         return repositorioDeUsuarios.findByUsername(sesion.getUsername());
-//        return User.create(Credencial.create("admin","admin"),true);
     }
-
-
 
     public void validarSesionActiva(Sesion sesion) {
         if (!sesion.getEstaActiva()) {

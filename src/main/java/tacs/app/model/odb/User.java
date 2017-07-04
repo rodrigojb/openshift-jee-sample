@@ -140,9 +140,9 @@ public class User {
 		movieList.list();
 	}
 
-//	public List<Movie> intersectionBetweenLists(MovieList movieList1, MovieList movieList2) {
-//		return movieList1.intersectionWith(movieList2);
-//	}
+	public List<Movie> intersectionBetweenLists(MovieList movieList1, MovieList movieList2) {
+		return movieList1.intersectionWith(movieList2);
+	}
 
 
 	public void showMovieDetails(Movie movie) {
@@ -172,9 +172,9 @@ public class User {
 		this.lastAccess = lastAccess;
 	}
 
-//	public MovieList getList(MovieList list){
-//		return lists.stream().filter(movieList -> movieList.getId().equals(list.getId())).findFirst().orElseThrow(() -> new RuntimeException("No existe la lista solicitada"));
-//	}
+	public MovieList getList(MovieList list){
+		return lists.stream().filter(movieList -> movieList.getId().equals(list.getId())).findFirst().orElseThrow(() -> new RuntimeException("No existe la lista solicitada"));
+	}
 
 	public Boolean getAdmin() {
 		return isAdmin;
