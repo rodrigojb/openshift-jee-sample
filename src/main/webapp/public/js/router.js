@@ -20,12 +20,12 @@ myApp.config(function ($stateProvider) {
         {
             name: 'actoresFavoritos',
             url: '/actoresFavoritos',
-            templateUrl: 'templates/actoresFavoritos.html'
+            templateUrl: 'views/actoresFavoritos.html'
         },
         {
             name: 'listas',
             url: '/listas',
-            templateUrl: 'templates/listas/list.html'
+            templateUrl: 'views/listas/list.html'
         },
 
         {
@@ -34,7 +34,7 @@ myApp.config(function ($stateProvider) {
             controller: 'buscarMoviesController',
             views: {
                 'container@': {
-                    templateUrl: 'templates/buscar/movies.html'
+                    templateUrl: 'views/buscar/movies.html'
                 }
             }
         },
@@ -44,7 +44,7 @@ myApp.config(function ($stateProvider) {
             url: '/users',
             views: {
                 'container@': {
-                    templateUrl: 'templates/admin/users.html'
+                    templateUrl: 'views/admin/users.html'
                 }
             }
         },
@@ -57,7 +57,7 @@ myApp.config(function ($stateProvider) {
             },
             views: {
                 'container@': {
-                    templateUrl: 'templates/admin/listComparison.html'
+                    templateUrl: 'views/admin/listComparison.html'
                 }
             }
         },
@@ -67,7 +67,7 @@ myApp.config(function ($stateProvider) {
             url: '/movie/:fichaId',
             views: {
                 'container@': {
-                    templateUrl: 'templates/fichas/pelicula.html'
+                    templateUrl: 'views/fichas/pelicula.html'
                 }
             }
         },
@@ -77,7 +77,7 @@ myApp.config(function ($stateProvider) {
             url: '/person/:fichaId',
             views: {
                 'container@': {
-                    templateUrl: 'templates/fichas/persona.html'
+                    templateUrl: 'views/fichas/persona.html'
                 }
             }
         },
@@ -86,7 +86,7 @@ myApp.config(function ($stateProvider) {
             url: '/ranking',
             views: {
                 'container@': {
-                    templateUrl: 'templates/admin/rankingActoresFavoritos.html'
+                    templateUrl: 'views/admin/rankingActoresFavoritos.html'
                 }
             }
         }
