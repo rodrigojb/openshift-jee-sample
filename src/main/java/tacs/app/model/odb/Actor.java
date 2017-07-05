@@ -3,24 +3,24 @@
  */
 package tacs.app.model.odb;
 
+import com.querydsl.core.annotations.QueryEntity;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.mongodb.morphia.annotations.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 import tacs.app.model.tmdb.TMDbStatic;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-//import org.mongodb.morphia.annotations.Id;
-//import org.springframework.data.annotation.PersistenceConstructor;
-//import org.springframework.data.mongodb.core.mapping.Document;
-
-//@QueryEntity
-//@Document
+@QueryEntity
+@Document
 public class Actor {
 
-//    @Id
+    @Id
     private String id;
     private String name;
     private List<Image> profiles = new ArrayList<Image>();
@@ -52,7 +52,7 @@ public class Actor {
         return this.getJsonResponse();
     }
 
-//    @PersistenceConstructor
+    @PersistenceConstructor
     public Actor(){
         super();
     }

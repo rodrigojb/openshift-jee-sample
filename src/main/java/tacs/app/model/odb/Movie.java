@@ -3,24 +3,23 @@
  */
 package tacs.app.model.odb;
 
+import com.querydsl.core.annotations.QueryEntity;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.mongodb.morphia.annotations.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 import tacs.app.model.tmdb.TMDbStatic;
 
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-//import com.querydsl.core.annotations.QueryEntity;
-//import org.mongodb.morphia.annotations.Id;
-//import org.springframework.data.mongodb.core.mapping.Document;
-
-//@QueryEntity
-//@Document
+@QueryEntity
+@Document
 public class Movie {
 
-//	@Id
+	@Id
 	private String id;
 	private String title;
 	private String overview;
@@ -96,9 +95,9 @@ public class Movie {
 	/**
 	 * @return the reviews
 	 */
-//	public List<Review> getReviews() {
-//		return reviews;
-//	}
+	public List<Review> getReviews() {
+		return reviews;
+	}
 
 	public void setInfo() {
 		try {
@@ -165,16 +164,16 @@ public class Movie {
 	 * @throws JSONException
 	 * @throws IOException
 	 */
-//	private void setReviews() throws JSONException, IOException {
-//		JSONArray reviews = TMDbStatic.getResource2("movie", this.getId() + "/reviews").getJSONArray("results");
-//		for (int i = 0; i < reviews.length(); i++) {
-////			this.addReview(new Review(reviews.getJSONObject(i), this));
-//		}
-//	}
-//
-//	private void addReview(Review review) {
-//		this.getReviews().add(review);
-//	}
+	private void setReviews() throws JSONException, IOException {
+		JSONArray reviews = TMDbStatic.getResource2("movie", this.getId() + "/reviews").getJSONArray("results");
+		for (int i = 0; i < reviews.length(); i++) {
+			this.addReview(new Review(reviews.getJSONObject(i), this));
+		}
+	}
+
+	private void addReview(Review review) {
+		this.getReviews().add(review);
+	}
 
 	/**
 	 * @throws JSONException

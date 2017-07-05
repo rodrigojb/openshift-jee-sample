@@ -3,20 +3,21 @@
  */
 package tacs.app.model.odb;
 
+import com.querydsl.core.annotations.QueryEntity;
 import org.json.JSONObject;
-//import org.mongodb.morphia.annotations.Id;
-//import org.springframework.data.annotation.PersistenceConstructor;
-//import org.springframework.data.mongodb.core.mapping.Document;
+import org.mongodb.morphia.annotations.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * @author facundo91
  *
  */
-//@QueryEntity
-//@Document
+@QueryEntity
+@Document
 public class ActorEnPelicula {
 
-//	@Id
+	@Id
 	private int id;
 	private String actorId; // just id in the TMDb API
 	private String movieId;
@@ -43,7 +44,7 @@ public class ActorEnPelicula {
 		this.setMovieTitle(jsonCredit.getString("title"));
 	}
 
-//	@PersistenceConstructor
+	@PersistenceConstructor
 	public ActorEnPelicula(String actorId,String movieId) {
 		super();
 		this.movieId = movieId;

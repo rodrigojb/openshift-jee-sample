@@ -3,21 +3,21 @@
  */
 package tacs.app.model.odb;
 
+import com.querydsl.core.annotations.QueryEntity;
+import org.mongodb.morphia.annotations.Id;
+import org.springframework.data.annotation.PersistenceConstructor;
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-//import org.mongodb.morphia.annotations.Id;
-//import org.springframework.data.annotation.PersistenceConstructor;
-//import org.springframework.data.mongodb.core.mapping.Document;
-//import java.util.stream.Collectors;
-
-//@QueryEntity
-//@Document
+@QueryEntity
+@Document
 public class MovieList {
 
-//	@Id
+	@Id
 	private String id;
 	private String name;
 	private List<Movie> movies;
@@ -70,7 +70,7 @@ public class MovieList {
 		this.movies = movies;
 	}
 
-//	@PersistenceConstructor
+	@PersistenceConstructor
 	public MovieList() {
 	}
 
