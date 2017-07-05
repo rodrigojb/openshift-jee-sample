@@ -33,7 +33,9 @@ public class Application extends SpringBootServletInitializer {
         return new WebMvcConfigurerAdapter() {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/**").allowedOrigins("http://tacs-tmdb-tmdb-grupo1.7e14.starter-us-west-2.openshiftapps.com");
+                registry.addMapping("/**")
+                        .allowedOrigins("http://tacs-tmdb-tmdb-grupo1.7e14.starter-us-west-2.openshiftapps.com")
+                        .allowedMethods("*");
             }
         };
     }

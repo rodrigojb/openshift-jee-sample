@@ -27,26 +27,16 @@ myApp.config(function ($stateProvider) {
             url: '/listas',
             templateUrl: 'views/listas/list.html'
         },
-
         {
             name: 'buscarMovies',
             url: '/buscar/pelicula/',
             controller: 'buscarMoviesController',
-            views: {
-                'container@': {
-                    templateUrl: 'views/buscar/movies.html'
-                }
-            }
+            templateUrl: 'views/buscar/movies.html'
         },
-
         {
             name: 'users',
             url: '/users',
-            views: {
-                'container@': {
-                    templateUrl: 'views/admin/users.html'
-                }
-            }
+            templateUrl: 'views/admin/users.html'
         },
 
         {
@@ -71,7 +61,6 @@ myApp.config(function ($stateProvider) {
                 }
             }
         },
-
         {
             name: 'fichaPersona',
             url: '/person/:fichaId',
@@ -84,13 +73,8 @@ myApp.config(function ($stateProvider) {
         {
             name: 'rankingActoresFavoritos',
             url: '/ranking',
-            views: {
-                'container@': {
-                    templateUrl: 'views/admin/rankingActoresFavoritos.html'
-                }
-            }
+            templateUrl: 'views/admin/rankingActoresFavoritos.html'
         }
-
     ]
 
     // Loop over the state definitions and register them
