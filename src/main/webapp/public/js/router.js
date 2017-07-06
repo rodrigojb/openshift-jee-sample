@@ -38,28 +38,18 @@ myApp.config(function ($stateProvider) {
             url: '/users',
             templateUrl: 'views/admin/users.html'
         },
-
         {
             name: 'users.lists',
             url: '/lists',
             params: {
                 usersSel: null
             },
-            views: {
-                'container@': {
-                    templateUrl: 'views/admin/listComparison.html'
-                }
-            }
+            templateUrl: 'views/admin/listComparison.html'
         },
-
         {
             name: 'fichaPelicula',
             url: '/movie/:fichaId',
-            views: {
-                'container@': {
-                    templateUrl: 'views/fichas/pelicula.html'
-                }
-            }
+            templateUrl: 'views/fichas/pelicula.html'
         },
         {
             name: 'fichaPersona',
